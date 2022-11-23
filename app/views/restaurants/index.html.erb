@@ -1,0 +1,32 @@
+<h1>Restaurants</h1>
+
+
+
+<% @restaurants.each do |restaurant| %>
+<div class = "restaurant">
+ <h2> <a href="/<%=restaurant.id%>"><%=restaurant.name%></a></h2> <br>
+  <h4><%=restaurant.category%></h4><br>
+  <h5><%=restaurant.rating%> stars </h5><br>
+  <h6><%=restaurant.phone_number%></h6><br>
+</div>
+<% end %>
+
+<a  class="add" href="restaurants/new">Add Restaurant</a>
+
+<style>
+.restaurant{
+  padding:50px;
+  margin:10px;
+  width:30vw;
+  border: 4px solid grey;
+}
+
+.add{
+  text-decoration:none;
+  font-size:30px;
+  color:red;
+  padding:30px;
+
+}
+
+</style>

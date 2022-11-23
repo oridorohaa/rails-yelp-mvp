@@ -1,0 +1,7 @@
+Ratings:
+<% @reviews.each do |review| %>
+  <%=review.content %>
+  <%=review.rating %>
+<% end %>
+
+<a href="/restaurants/<%=@restaurant.id%>/reviews/new">Add New</a>
